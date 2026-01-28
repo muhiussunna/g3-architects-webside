@@ -106,23 +106,8 @@ font-size: 4rem;
 #Quick-list{
 font-weight: 500;
 }
-/* responsive mda quary */
-@media screen and (max-width: 576px) {
- .navbar,
-  .nav-links,
-  .teams{
-   flex-direction: column;
- }
-
- .team-img-container {
-  grid-template-columns: repeat(1,1fr);
-}
-.our-faetures{
-  margin-left: 20px;
-}
-}
 /* some facts releted styles  */
-.Fnacts-Ceronita{
+.Facts-Container{
   display: grid;
   grid-template-columns:repeat(4,1fr);
 }
@@ -145,12 +130,48 @@ font-weight: 500;
   font-size: 1.25rem;
   margin-top: 10px;
 }
-.fact-discriptio {
+.fact-discription {
   max-width: 540px;
+}
+.sponsor-companies {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+.sponsor-companies img {
+  filter: grayscale(100%);
+}
+
+/* responsive mda quary */
+@media screen and (max-width: 576px) {
+ .navbar,
+  .nav-links,
+  .teams{
+   flex-direction: column;
+ }
+
+ .team-img-container,
+  .Facts-Container,
+  .sponsor-companies
+  {
+  grid-template-columns: repeat(1,1fr);
+}
+.Facts-Container, .sponsor-companies {
+  justify-items: center;
+  gap: 24px;
+}
+.our-faetures{
+  margin-left: 20px;
+}
+}
+/* sponsoe related styles */
+.sponsor-info {
+  max-width: 540;
+  margin: 50px auto;
+  text-align: center;
 }
 /* Midiam size divice */
 @media screen and (min-width:576px) and (max-width:992px) {
-  .teams{
+  .teams,{
     flex-direction: column;
   }
   .our-faetures{
